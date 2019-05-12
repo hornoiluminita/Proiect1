@@ -19,14 +19,13 @@ public class LoginSteps {
     @Step
     public void goToLoginPage(){
         homepage.clickMyAccount();
-        homepage.clickLoginLink();
     }
 
     @Step
     public void loginUser(String email, String password){
         loginPage.setEmailField(email);
         loginPage.setPassField(password);
-        loginPage.clickLoginButton();
+        homepage.clickLoginLink();
     }
 
     @Step

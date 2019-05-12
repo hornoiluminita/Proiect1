@@ -9,10 +9,10 @@ import net.thucydides.core.annotations.DefaultUrl;
 @DefaultUrl("http://qa3.fasttrackit.org:8008/")
 public class Homepage extends PageObject {
 
-    @FindBy(css = "a[title='My Account']")
+    @FindBy(css = "a[title='Login']")
     private WebElementFacade myAccountButton;
 
-    @FindBy(css = "a[title='Log In']")
+    @FindBy(css = "button[name='login']")
     private WebElementFacade loginLink;
 
     public void clickMyAccount(){

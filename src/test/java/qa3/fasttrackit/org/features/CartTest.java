@@ -24,7 +24,6 @@ public class CartTest {
     @Test
     public void removeproductfromcart(){
         cartSteps.navigateToHomepage();
-        cartSteps.goToCartpage();
         cartSteps.removeproductfromcart();
     }
 

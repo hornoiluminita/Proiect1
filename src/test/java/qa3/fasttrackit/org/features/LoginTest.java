@@ -28,6 +28,7 @@ public class LoginTest {
         loginSteps.goToLoginPage();
         loginSteps.loginUser("lllumy@yahoo.co.uk","oana1986@");
         loginSteps.checkUserIsLoggedIn();
+
     }
 
     @Test

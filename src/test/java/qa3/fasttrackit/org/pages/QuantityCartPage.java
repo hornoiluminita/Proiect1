@@ -14,7 +14,7 @@ public class QuantityCartPage extends PageObject {
     private WebElementFacade addcartButton;
     @FindBy (css="i.fa.fa-shopping-cart")
     private WebElementFacade viewcartButton;
-    @FindBy (id="#quantity_5cd85ecab251a ")
+    @FindBy (id="#quantity_5cd9c3056205d")
     private WebElementFacade changequantityButton;
     @FindBy (css="update_cart")
     private WebElementFacade updatecartButton;

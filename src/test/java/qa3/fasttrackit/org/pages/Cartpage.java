@@ -14,9 +14,9 @@ public class Cartpage extends PageObject {
     private WebElementFacade addtocartButton;
     @FindBy (css="a[href*='checkout']")
     private WebElementFacade checkoutButton;
-    @FindBy (css="fa fa-shopping-cart")
+    @FindBy (css=".fa-shopping-cart")
     private WebElementFacade viewcartButton;
-    @FindBy (css="remove this item")
+    @FindBy (css="a[href*='remove_item']")
     private WebElementFacade  removecartButton;
     public void clickshopButton(){
         clickOn(shopButton);

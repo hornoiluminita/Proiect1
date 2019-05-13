@@ -8,11 +8,11 @@ import net.thucydides.core.pages.PageObject;
 @DefaultUrl("http://qa3.fasttrackit.org:8008/")
 public class MyAccountPage extends PageObject {
 
-    @FindBy(css = "div.entry-content p")
+    @FindBy(css = "p:first-child")
     private WebElementFacade helloMessage;
 
 
     public void checkLoggedIn(String userName) {
-        helloMessage.shouldContainText("Hello, " + userName + "!");
+        helloMessage.shouldContainText("Hello" + userName);
     }
 }

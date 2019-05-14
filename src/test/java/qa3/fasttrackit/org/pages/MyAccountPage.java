@@ -12,7 +12,7 @@ public class MyAccountPage extends PageObject {
     private WebElementFacade helloMessage;
 
 
-    public void checkLoggedIn(String userName) {
-        helloMessage.shouldContainText("Hello" + userName);
+    public void checkLoggedIn(String Username) {
+        helloMessage.shouldContainText("Hello " + Username);
     }
 }

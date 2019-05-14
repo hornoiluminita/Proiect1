@@ -28,11 +28,8 @@ public class LoginPage extends PageObject {
         typeInto(passField, pass);
     }
 
-    public void clickLoginButton(){
-        clickOn(loginButton);
-    }
 
-    public void checkErrorMessage () {errorMessage.shouldContainText("Invalid username");}
+    public void checkErrorMessage () {errorMessage.shouldContainText("ERROR: The password you entered for the email address lllumy@yahoo.co.uk is incorrect. Lost your password?");}
 
     public void checkUserIsOnLoginPage (){loginButton.shouldBeVisible();}
 

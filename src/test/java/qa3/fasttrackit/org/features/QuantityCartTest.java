@@ -31,7 +31,7 @@ public class QuantityCartTest {
     public void notnumericquantity() {
 
         quantityCartSteps.navigateToHomepage();
-        quantityCartSteps.gotoquantitybutton("2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222");
+        quantityCartSteps.gotoquantitybutton("@");
     }
 
 }

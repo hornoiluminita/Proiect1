@@ -8,21 +8,35 @@ import net.thucydides.core.annotations.DefaultUrl;
 @DefaultUrl("http://qa3.fasttrackit.org:8008/")
 
 public class QuantityCartPage extends PageObject {
-    @FindBy(css="a[href*='shop']")
+    @FindBy(css = "a[href*='shop']")
     private WebElementFacade shopButton;
-    @FindBy (css= "a[href*='add-to-cart=60']")
+    @FindBy(css = "a[href*='add-to-cart=60']")
     private WebElementFacade addcartButton;
-    @FindBy (css="i.fa.fa-shopping-cart")
+    @FindBy(css = "i.fa.fa-shopping-cart")
     private WebElementFacade viewcartButton;
-    @FindBy (id="#quantity_5cd9c3056205d")
+    @FindBy(css = "input[title='Qty'")
     private WebElementFacade changequantityButton;
-    @FindBy (css="update_cart")
+    @FindBy(css = "button[name='update_cart']")
     private WebElementFacade updatecartButton;
-    public void clickshopButton(){
+
+    public void clickshopButton() {
         clickOn(shopButton);
     }
-    public void clickaddcartButton(){clickOn(addcartButton);}
-    public void clickviewcartButton (){clickOn(viewcartButton);}
-    public void clickchangequantityButton (){clickOn(changequantityButton);}
-    public void clickupdatecartButton () {clickOn(updatecartButton);}
+
+    public void clickaddcartButton() {
+        clickOn(addcartButton);
+    }
+
+    public void clickviewcartButton() {
+        waitABit(1500);
+        clickOn(viewcartButton);
+    }
+
+    public void clickchangequantityButton(String quantity) {
+        typeInto(changequantityButton,quantity);
+    }
+
+    public void clickupdatecartButton() {
+        clickOn(updatecartButton);
+    }
 }

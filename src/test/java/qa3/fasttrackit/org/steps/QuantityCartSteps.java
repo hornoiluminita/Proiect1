@@ -17,11 +17,11 @@ public class QuantityCartSteps {
         homepage.open();
     }
     @Step
-    public void gotoquantitybutton(){
+    public void gotoquantitybutton(String quantity){
         quantityCartPage.clickshopButton();
         quantityCartPage.clickaddcartButton();
         quantityCartPage.clickviewcartButton();
-        quantityCartPage.clickchangequantityButton();
+        quantityCartPage.clickchangequantityButton(quantity);
         quantityCartPage.clickupdatecartButton();
     }
 }

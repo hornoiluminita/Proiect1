@@ -19,8 +19,22 @@ public class QuantityCartTest {
     @Test
     public void changequantityfromcart() {
         quantityCartSteps.navigateToHomepage();
-        quantityCartSteps.gotoquantitybutton();
+        quantityCartSteps.gotoquantitybutton("3");
 
+    }
+    @Test
+    public void negativequantity(){
+        quantityCartSteps.navigateToHomepage();
+        quantityCartSteps.gotoquantitybutton("-4");
+    }
+    @Test
+    public void notnumericquantity() {
+
+        quantityCartSteps.navigateToHomepage();
+        quantityCartSteps.gotoquantitybutton("2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222");
     }
 
 }
+
+
+

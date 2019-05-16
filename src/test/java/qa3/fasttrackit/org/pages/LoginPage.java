@@ -16,7 +16,7 @@ public class LoginPage extends PageObject {
     @FindBy(id = "password")
     private WebElementFacade passField;
 
-    @FindBy(css="button button")
+    @FindBy(css="button[name='login']")
     private WebElementFacade loginButton;
 
     @FindBy (css=".woocommerce-error li")
@@ -29,9 +29,13 @@ public class LoginPage extends PageObject {
     }
 
 
-    public void checkErrorMessage () {errorMessage.shouldContainText("ERROR: The password you entered for the email address lllumy@yahoo.co.uk is incorrect. Lost your password?");}
+    public void checkErrorMessage () {
+        errorMessage.shouldContainText("ERROR: The password you entered for the email address lllumy@yahoo.co.uk is incorrect. Lost your password?");
+    }
 
-    public void checkUserIsOnLoginPage (){loginButton.shouldBeVisible();}
+    public void checkUserIsOnLoginPage (){
+        element(loginButton).shouldBeVisible();
+    }
 
 
 }

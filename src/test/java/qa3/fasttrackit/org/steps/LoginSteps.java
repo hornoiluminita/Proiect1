@@ -32,12 +32,20 @@ public class LoginSteps {
     public void checkUserIsLoggedIn(){
         myAccountPage.checkLoggedIn("lllumy");
     }
-
     @Step
-    public void checkUserNotLoggedIn(){
-        loginPage.checkErrorMessage();
+    public void checkAdminIsLoggedIn(){
+        myAccountPage.checkLoggedIn("admin");
     }
 
+    @Step
+    public void checkIncorrectPassword(){
+        loginPage.checkErrorMessageIncorrectPassword();
+    }
+
+    @Step
+    public void checkErrorMessageIncorrectEmail(){
+        loginPage.checkErrorMessageIncorrectEmail();
+    }
     @Step
     public void userStillOnLoginPage(){
         loginPage.checkUserIsOnLoginPage();

@@ -32,27 +32,43 @@ public class LoginTest {
     }
 
     @Test
-    public void loginWithInvalidPassword(){
+    public void loginWithIncorrectPassword(){
         loginSteps.navigateToHomepage();
         loginSteps.goToLoginPage();
         loginSteps.loginUser("lllumy@yahoo.co.uk","45454iuhggf");
-        loginSteps.checkUserNotLoggedIn();
+        loginSteps.checkIncorrectPassword();
     }
 
     @Test
     public void loginWithIncorrectEmail(){
         loginSteps.navigateToHomepage();
         loginSteps.goToLoginPage();
-        loginSteps.loginUser("lllumy@yahoo.co.uk","jujijijiji12356");
-        loginSteps.checkUserNotLoggedIn();
+        loginSteps.loginUser("lllulmy@yahoo.co.uk","oana1986@");
+        loginSteps.checkErrorMessageIncorrectEmail();
     }
     @Test
     public void loginWithInvalidEmail(){
         loginSteps.navigateToHomepage();
         loginSteps.goToLoginPage();
-        loginSteps.loginUser("lllumyyahoo.co.uk","123bjhbhbbj");
-
+        loginSteps.loginUser("lllumyyahoo.co.uk","oana1986@");
         loginSteps.userStillOnLoginPage();
+        loginSteps.checkErrorMessageIncorrectEmail();
+
+
+    }
+    @Test
+    public void loginWithIncorrectCredetials(){
+        loginSteps.navigateToHomepage();
+        loginSteps.goToLoginPage();
+        loginSteps.loginUser("lllumyyahoo.co.uk","123bjhbhbbj");
+        loginSteps.userStillOnLoginPage();
+        loginSteps.checkErrorMessageIncorrectEmail();}
+    @Test
+    public void loginWithValidCredentialsAdmin(){
+        loginSteps.navigateToHomepage();
+        loginSteps.goToLoginPage();
+        loginSteps.loginUser("admin","parola11");
+        loginSteps.checkAdminIsLoggedIn();
     }
 
 }

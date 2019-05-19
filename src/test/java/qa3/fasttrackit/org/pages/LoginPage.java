@@ -20,7 +20,9 @@ public class LoginPage extends PageObject {
     private WebElementFacade loginButton;
 
     @FindBy (css=".woocommerce-error li")
-    private  WebElementFacade errorMessage;
+    private  WebElementFacade errorMessageIncorrectPassword;
+    @FindBy (css="div strong")
+    private  WebElementFacade errorMessageIncorrectEmail;
 
     public void setEmailField(String email){ typeInto(emailField, email); }
 
@@ -29,13 +31,15 @@ public class LoginPage extends PageObject {
     }
 
 
-    public void checkErrorMessage () {
-        errorMessage.shouldContainText("ERROR: The password you entered for the email address lllumy@yahoo.co.uk is incorrect. Lost your password?");
+    public void checkErrorMessageIncorrectPassword () {
+        errorMessageIncorrectPassword.shouldContainText("ERROR: The password you entered for the email address lllumy@yahoo.co.uk is incorrect. Lost your password?");
+    }
+    public void checkErrorMessageIncorrectEmail(){
+        errorMessageIncorrectEmail.shouldContainText("ERROR");
     }
 
     public void checkUserIsOnLoginPage (){
         element(loginButton).shouldBeVisible();
     }
-
 
 }

@@ -18,11 +18,12 @@ public class Cartpage extends PageObject {
     private WebElementFacade viewcartButton;
     @FindBy (css="a[href*='remove_item']")
     private WebElementFacade  removecartButton;
-    public void clickshopButton(){
-        clickOn(shopButton);
-    }
+    @FindBy (css=".cart-empty")
+    private WebElementFacade checkMessageRemoveProductField;
+    public void clickshopButton(){ clickOn(shopButton); }
     public void clickaddtocartButton(){clickOn(addtocartButton);}
     public void clickcheckoutButton(){clickOn(checkoutButton);}
     public void clickviewcartButton (){clickOn(viewcartButton);}
     public void clickremovecartButton (){clickOn(removecartButton);}
+    public void setCheckMessageRemoveProduct(String message){typeInto(checkMessageRemoveProductField,message);}
 }

@@ -24,7 +24,7 @@ public class CartTest {
     @Test
     public void removeproductfromcart(){
         cartSteps.navigateToHomepage();
-        cartSteps.removeproductfromcart("Your cart is currently empty.");
+        cartSteps.removeproductfromcart();
     }
 
     }

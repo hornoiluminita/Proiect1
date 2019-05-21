@@ -16,6 +16,8 @@ public class Cartpage extends PageObject {
     private WebElementFacade checkoutButton;
     @FindBy (css=".fa-shopping-cart")
     private WebElementFacade viewcartButton;
+    @FindBy (css="#order_review_heading")
+    private WebElementFacade checkaddedProduct;
     @FindBy (css="a[href*='remove_item']")
     private WebElementFacade  removecartButton;
     @FindBy (css=".cart-empty")
@@ -25,5 +27,6 @@ public class Cartpage extends PageObject {
     public void clickcheckoutButton(){clickOn(checkoutButton);}
     public void clickviewcartButton (){clickOn(viewcartButton);}
     public void clickremovecartButton (){clickOn(removecartButton);}
-    public void setCheckMessageRemoveProduct(String message){typeInto(checkMessageRemoveProductField,message);}
+    public void setCheckMessageRemoveProduct(){checkMessageRemoveProductField.shouldContainText("Your cart is currently empty.");}
+    public void setCheckoutButton (){checkaddedProduct.shouldContainText("Your order");}
 }

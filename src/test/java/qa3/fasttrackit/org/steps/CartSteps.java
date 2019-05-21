@@ -19,14 +19,15 @@ public class CartSteps {
         cartpage.clickshopButton();
         cartpage.clickaddtocartButton();
         cartpage.clickcheckoutButton();
+        cartpage.setCheckoutButton();
     }
     @Step
-    public void removeproductfromcart(String message){
+    public void removeproductfromcart(){
         cartpage.clickshopButton();
         cartpage.clickaddtocartButton();
         cartpage.clickcheckoutButton();
         cartpage.clickviewcartButton ();
         cartpage.clickremovecartButton();
-        cartpage.setCheckMessageRemoveProduct(message);
+        cartpage.setCheckMessageRemoveProduct();
     }
 }

@@ -25,8 +25,6 @@ public class BlogSteps {
     @Step
     public void sendcomment() { blogPage.clickpostCommentButton();}
     @Step
-    public void checkcomment(String message){
-    blogPage.setMessageField(message);
-        }
+    public void checkcomment(){ blogPage.setMessageField(); }
 
 }

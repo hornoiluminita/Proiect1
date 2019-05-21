@@ -12,11 +12,9 @@ public class BlogPageAdmin extends PageObject {
     private WebElementFacade fastTrackITButton;
     @FindBy(css="a[href*='edit-comments']>div.wp-menu-name")
     private WebElementFacade commentsButton;
-    @FindBy (css="#cb-select-566")
-    private WebElementFacade selectcommentButton;
-    @FindBy(css="#bulk-action-selector-top")
-    private  WebElementFacade bulkActionsButton;
     @FindBy (css="#bulk-action-selector-top")
+    private WebElementFacade selectcommentButton;
+    @FindBy (css="#bulk-action-selector-top option:last-child")
     private WebElementFacade moveToTrashButton;
     @FindBy (css="#doaction")
     private WebElementFacade applyButton;
@@ -25,8 +23,9 @@ public class BlogPageAdmin extends PageObject {
     public void clickfastTrackITButton(){clickOn(fastTrackITButton);}
     public void clickcommentsButton(){clickOn(commentsButton);}
     public void clickselectcommnetButton(){clickOn(selectcommentButton);}
-    public void clickbulkActionsButton(){clickOn(bulkActionsButton);}
     public void clickmoveToTrashButton(){clickOn(moveToTrashButton);}
     public void clickapplyButton(){clickOn(applyButton);}
     public void checkmessageMoveToTrash(){messageMoveToTrash.shouldContainText("1 comment moved to the Trash");}
 }
+
+

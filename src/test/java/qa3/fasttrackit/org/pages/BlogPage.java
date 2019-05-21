@@ -14,11 +14,11 @@ public class BlogPage extends PageObject {
     private  WebElementFacade commentField;
     @FindBy (css=".submit" )
     private WebElementFacade postCommentButton;
-    @FindBy (css="p.comment-awaiting-moderation")
+    @FindBy (css="#content #comment-573 .comment-awaiting-moderation")
     private WebElementFacade messageField;
 
   public void clickblogButton (){ clickOn(blogButton);}
   public void setCommentField(String comment){typeInto(commentField,comment);}
   public void clickpostCommentButton(){clickOn(postCommentButton);}
-  public void setMessageField(String message){typeInto(messageField,message);}
+  public void setMessageField(){messageField.shouldContainText("Your comment is awaiting moderation.");}
 }

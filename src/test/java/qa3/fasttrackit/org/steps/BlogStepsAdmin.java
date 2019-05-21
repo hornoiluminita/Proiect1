@@ -19,11 +19,9 @@ public class BlogStepsAdmin {
        blogPageAdmin.clickfastTrackITButton();
        blogPageAdmin.clickcommentsButton();
        blogPageAdmin.clickselectcommnetButton();
-       blogPageAdmin.clickbulkActionsButton();
        blogPageAdmin.clickmoveToTrashButton();
        blogPageAdmin.clickapplyButton();
         sleep(3);
-        blogPageAdmin.checkmessageMoveToTrash();
 
     }
     @Step

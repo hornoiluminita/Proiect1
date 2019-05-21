@@ -24,8 +24,8 @@ public class BlogTest {
         loginSteps.goToLoginPage();
         loginSteps.loginUser("lllumy@yahoo.co.uk","oana1986@");
         blogSteps.gotoblogButton();
-        blogSteps.postcomment("Ola");
+        blogSteps.postcomment("Buna");
         blogSteps.sendcomment();
-        blogSteps.checkcomment("Your comment is awaiting moderation.");
+        blogSteps.checkcomment();
     }
 }

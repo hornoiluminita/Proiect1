@@ -19,5 +19,6 @@ public class SearchTest{
     public void searchproduct (){
         searchSteps.navigateToHomepage();
         searchSteps.searchproduct();
+        searchSteps.checkproductwasfound();
     }
 }

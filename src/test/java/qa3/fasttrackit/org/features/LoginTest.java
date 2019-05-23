@@ -30,6 +30,16 @@ public class LoginTest {
         loginSteps.checkUserIsLoggedIn();
 
     }
+    @Test
+    public void logOut(){
+        loginSteps.navigateToHomepage();
+        loginSteps.goToLoginPage();
+        loginSteps.loginUser("lllumy@yahoo.co.uk","oana1986@");
+        loginSteps.checkUserIsLoggedIn();
+        loginSteps.logOutUser();
+        loginSteps.userStillOnLoginPage();
+    }
+
 
     @Test
     public void loginWithIncorrectPassword(){

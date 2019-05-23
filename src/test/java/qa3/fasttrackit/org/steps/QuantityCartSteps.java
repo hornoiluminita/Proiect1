@@ -12,16 +12,33 @@ public class QuantityCartSteps {
     MyAccountPage myAccountPage;
     Cartpage cartpage;
     QuantityCartPage quantityCartPage;
+
     @Step
-    public void navigateToHomepage(){
+    public void navigateToHomepage() {
         homepage.open();
     }
+
     @Step
-    public void gotoquantitybutton(String quantity){
+    public void gotoquantitybutton(String quantity) {
         quantityCartPage.clickshopButton();
         quantityCartPage.clickaddcartButton();
         quantityCartPage.clickviewcartButton();
         quantityCartPage.clickchangequantityButton(quantity);
         quantityCartPage.clickupdatecartButton();
     }
+
+    @Step
+    public void checkupdatecart (){
+        quantityCartPage.setCheckupdateproductButton();
+
+    }
+    @Step
+    public void checknegativequantitymessage(){
+     quantityCartPage.setChecknegativequantitymessage();
+    }
+    @Step
+    public  void checknotnumericquantitymessage(){
+    quantityCartPage.setChecknotnumericquantitymessage();
+    }
+
 }

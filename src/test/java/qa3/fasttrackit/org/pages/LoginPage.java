@@ -23,6 +23,8 @@ public class LoginPage extends PageObject {
     private  WebElementFacade errorMessageIncorrectPassword;
     @FindBy (css="div strong")
     private  WebElementFacade errorMessageIncorrectEmail;
+    @FindBy (css="li a[href*='my-account/customer-logout']")
+    private  WebElementFacade logoutButton;
 
     public void setEmailField(String email){ typeInto(emailField, email); }
 
@@ -41,5 +43,6 @@ public class LoginPage extends PageObject {
     public void checkUserIsOnLoginPage (){
         element(loginButton).shouldBeVisible();
     }
+    public void clicklogOutButton()  {clickOn(logoutButton);}
 
 }

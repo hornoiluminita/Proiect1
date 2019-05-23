@@ -20,20 +20,27 @@ public class QuantityCartTest {
     public void changequantityfromcart() {
         quantityCartSteps.navigateToHomepage();
         quantityCartSteps.gotoquantitybutton("3");
-
+        quantityCartSteps.checkupdatecart();
     }
     @Test
     public void negativequantity(){
         quantityCartSteps.navigateToHomepage();
         quantityCartSteps.gotoquantitybutton("-4");
+        quantityCartSteps.checknegativequantitymessage();
     }
     @Test
     public void notnumericquantity() {
 
         quantityCartSteps.navigateToHomepage();
-        quantityCartSteps.gotoquantitybutton("@");
+        quantityCartSteps.gotoquantitybutton("abc");
+        quantityCartSteps.checknotnumericquantitymessage();
     }
-
+    @Test
+    public void speicalcharacters (){
+        quantityCartSteps.navigateToHomepage();
+        quantityCartSteps.gotoquantitybutton("@!");
+        quantityCartSteps.checknotnumericquantitymessage();
+    }
 }
 
 

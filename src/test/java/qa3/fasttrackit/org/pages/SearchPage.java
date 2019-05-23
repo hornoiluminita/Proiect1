@@ -16,8 +16,11 @@ public class SearchPage  extends PageObject {
     private WebElementFacade searchField;
     @FindBy (css="header .search-submit ")
     private WebElementFacade selectsearchButon;
+    @FindBy (css=".page-title")
+    private  WebElementFacade checkProductWasFound;
     public void clickshopButton(){ clickOn(shopButton); }
     public void clicksearchButton (){clickOn(searchButton);}
     public void clicksearchField (String product){typeInto(searchField,product);}
     public void clickselectsearchButon (){clickOn(selectsearchButon);}
+    public void setCheckProductWasFound (){checkProductWasFound.shouldContainText("Search Results for:");}
 }

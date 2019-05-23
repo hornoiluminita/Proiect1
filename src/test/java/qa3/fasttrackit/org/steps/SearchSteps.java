@@ -18,5 +18,11 @@ public class SearchSteps {
        searchPage.clicksearchButton();
        searchPage.clicksearchField("Belt");
        searchPage.clickselectsearchButon();
+
+    }
+    @Step
+    public void checkproductwasfound(){
+        searchPage.setCheckProductWasFound();
+
     }
 }

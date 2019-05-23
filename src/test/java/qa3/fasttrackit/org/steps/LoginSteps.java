@@ -50,5 +50,9 @@ public class LoginSteps {
     public void userStillOnLoginPage(){
         loginPage.checkUserIsOnLoginPage();
     }
+    @Step
+    public  void logOutUser(){
+     loginPage.clicklogOutButton();
+    }
 
 }

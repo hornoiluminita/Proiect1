@@ -20,7 +20,7 @@ public class CartpageAdmin extends PageObject {
     private WebElementFacade regularpriceField;
     @FindBy (id="_sale_price")
     private WebElementFacade salepriceField;
-    @FindBy (css="input#publish")
+    @FindBy (css="#publish")
     private WebElementFacade publishButton;
     public void clickfastTrackITButton(){clickOn(fastTrackITButton);}
     public void clickproductsButton(){ clickOn(productsButton); }

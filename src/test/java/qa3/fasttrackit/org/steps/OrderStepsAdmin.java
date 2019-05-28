@@ -33,5 +33,6 @@ public class OrderStepsAdmin {
         ordersAdminPage.clicksearchFieldButton("lumy");
         ordersAdminPage.clickcustomerNameButton();
         ordersAdminPage.clickfilterButton();
+        ordersAdminPage.checkorderNameFiled();
     }
 }

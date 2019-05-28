@@ -32,5 +32,6 @@ public class OrdersTestAdmin {
         loginSteps.goToLoginPage();
         loginSteps.loginUser("admin","parola11");
         orderStepsAdmin.searchCustomer();
+
     }
 }

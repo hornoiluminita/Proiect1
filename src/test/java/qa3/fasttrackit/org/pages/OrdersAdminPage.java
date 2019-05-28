@@ -30,6 +30,8 @@ public class OrdersAdminPage extends PageObject {
     private WebElementFacade customerNameButton;
     @FindBy (css="#post-query-submit")
     private WebElementFacade filterButton;
+    @FindBy (css="#2582")
+    private WebElementFacade orderNameFiled;
     public void clickfastTrackITButton (){clickOn(fastTrackITButton);}
     public void clickwooCommerceButton (){clickOn(wooCommerceButton);}
     public void clickselectOrderButton (){clickOn(selectOrderButton);}
@@ -41,6 +43,7 @@ public class OrdersAdminPage extends PageObject {
     public void clicksearchFieldButton(String customer){typeInto(searchFieldButton,customer);}
     public void clickcustomerNameButton(){clickOn(customerNameButton);}
     public void clickfilterButton(){clickOn(filterButton);}
+    public void checkorderNameFiled(){orderNameFiled.shouldContainText("#2582");}
 }
 
 

@@ -20,7 +20,7 @@ public class QuantityCartPage extends PageObject {
     private WebElementFacade updatecartButton;
     @FindBy(css = ".woocommerce-message")
     private WebElementFacade checkupdateproductButton;
-    @FindBy (css="input#quantity_5ce6d46dde08d")
+    @FindBy (css=".input-text.qty.text")
     private WebElementFacade checknegativequantitymessage;
     @FindBy(css=".cart-empty")
     private WebElementFacade checknotnumericquantitymessage;
@@ -50,7 +50,8 @@ public class QuantityCartPage extends PageObject {
         checkupdateproductButton.shouldContainText("Cart updated.");
     }
    public void setChecknegativequantitymessage(){
-        checknegativequantitymessage.shouldContainText("Valoarea trebuie sa fie egala sau mai mare cu 0.");
+        getDriver().navigate().refresh();
+        checknegativequantitymessage.shouldContainText("");
    }
     public void setChecknotnumericquantitymessage(){
         checknotnumericquantitymessage.shouldContainText("Your cart is currently empty.");

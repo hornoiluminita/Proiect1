@@ -8,9 +8,6 @@ import qa3.fasttrackit.org.pages.MyAccountPage;
 import qa3.fasttrackit.org.pages.QuantityCartPage;
 public class QuantityCartSteps {
     Homepage homepage;
-    LoginPage LoginPage;
-    MyAccountPage myAccountPage;
-    Cartpage cartpage;
     QuantityCartPage quantityCartPage;
 
     @Step

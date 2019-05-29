@@ -6,6 +6,7 @@ import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
+import qa3.fasttrackit.org.steps.LoginSteps;
 import qa3.fasttrackit.org.steps.QuantityCartSteps;
 
 @RunWith(SerenityRunner.class)
@@ -15,6 +16,8 @@ public class QuantityCartTest {
     private WebDriver driver;
     @Steps
     QuantityCartSteps quantityCartSteps;
+    @Steps
+    LoginSteps loginSteps;
 
     @Test
     public void changequantityfromcart() {

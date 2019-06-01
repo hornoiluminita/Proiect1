@@ -10,23 +10,26 @@ public class OrderStepsAdmin {
     Homepage homepage;
     LoginPage loginPage;
     OrdersAdminPage ordersAdminPage;
+
     @Step
-    public void navigateToHomepage(){
+    public void navigateToHomepage() {
         homepage.open();
     }
+
     @Step
-    public void changeStatusOrder (){
-     ordersAdminPage.clickfastTrackITButton();
-     ordersAdminPage.clickwooCommerceButton();
-     ordersAdminPage.clickselectOrderButton();
-     ordersAdminPage.clickbulkActionsButton();
-     ordersAdminPage.clickstatusOnHoldButton();
-     ordersAdminPage.clickapplyButton();
-     ordersAdminPage.checkchangedStatusButton();
+    public void changeStatusOrder() {
+        ordersAdminPage.clickfastTrackITButton();
+        ordersAdminPage.clickwooCommerceButton();
+        ordersAdminPage.clickselectOrderButton();
+        ordersAdminPage.clickbulkActionsButton();
+        ordersAdminPage.clickstatusOnHoldButton();
+        ordersAdminPage.clickapplyButton();
+        ordersAdminPage.checkchangedStatusButton();
 
     }
+
     @Step
-    public void searchCustomer (){
+    public void searchCustomer() {
         ordersAdminPage.clickfastTrackITButton();
         ordersAdminPage.clickwooCommerceButton();
         ordersAdminPage.clicksearhCustomerButton();

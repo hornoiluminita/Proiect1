@@ -11,22 +11,24 @@ public class CartSteps {
     Cartpage cartpage;
 
     @Step
-    public void navigateToHomepage(){
+    public void navigateToHomepage() {
         homepage.open();
     }
+
     @Step
-    public void goToCartpage(){
+    public void goToCartpage() {
         cartpage.clickshopButton();
         cartpage.clickaddtocartButton();
         cartpage.clickcheckoutButton();
         cartpage.setCheckoutButton();
     }
+
     @Step
-    public void removeproductfromcart(){
+    public void removeproductfromcart() {
         cartpage.clickshopButton();
         cartpage.clickaddtocartButton();
         cartpage.clickcheckoutButton();
-        cartpage.clickviewcartButton ();
+        cartpage.clickviewcartButton();
         cartpage.clickremovecartButton();
         cartpage.setCheckMessageRemoveProduct();
     }

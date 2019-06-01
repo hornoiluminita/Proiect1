@@ -20,11 +20,12 @@ public class BlogTestAdmin {
     LoginSteps loginSteps;
     @Steps
     BlogStepsAdmin blogStepsAdmin;
-      @Test
+
+    @Test
     public void deletecomment() {
         loginSteps.navigateToHomepage();
         loginSteps.goToLoginPage();
-        loginSteps.loginUser("admin","parola11");
+        loginSteps.loginUser("admin", "parola11");
         blogStepsAdmin.removecomment();
-      }
+    }
 }

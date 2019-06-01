@@ -15,7 +15,7 @@ public class CartStepsAdmin {
     }
 
     @Step
-    public void addproducttoshop(String regularprice,String saleprice,String productname){
+    public void addproducttoshop(String regularprice, String saleprice, String productname) {
         cartpageAdmin.clickfastTrackITButton();
         cartpageAdmin.clickproductsButton();
         cartpageAdmin.clickaddNewProductButton();

@@ -18,19 +18,21 @@ public class OrdersTestAdmin {
     LoginSteps loginSteps;
     @Steps
     OrderStepsAdmin orderStepsAdmin;
+
     @Test
-    public void changestatusorder(){
+    public void changestatusorder() {
         loginSteps.navigateToHomepage();
         loginSteps.goToLoginPage();
-        loginSteps.loginUser("admin","parola11");
+        loginSteps.loginUser("admin", "parola11");
         orderStepsAdmin.changeStatusOrder();
 
     }
+
     @Test
-    public void searchCustomer(){
+    public void searchCustomer() {
         loginSteps.navigateToHomepage();
         loginSteps.goToLoginPage();
-        loginSteps.loginUser("admin","parola11");
+        loginSteps.loginUser("admin", "parola11");
         orderStepsAdmin.searchCustomer();
 
     }

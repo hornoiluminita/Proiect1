@@ -10,13 +10,14 @@ import org.openqa.selenium.WebDriver;
 import qa3.fasttrackit.org.steps.SearchSteps;
 
 @RunWith(SerenityRunner.class)
-public class SearchTest{
+public class SearchTest {
     @Managed(uniqueSession = true)
     private WebDriver driver;
     @Steps
     SearchSteps searchSteps;
+
     @Test
-    public void searchproduct (){
+    public void searchproduct() {
         searchSteps.navigateToHomepage();
         searchSteps.searchproduct();
         searchSteps.checkproductwasfound();

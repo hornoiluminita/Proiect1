@@ -15,19 +15,21 @@ public class CartTest {
     private WebDriver driver;
     @Steps
     CartSteps cartSteps;
+
     @Test
-    public void addproducttocart(){
+    public void addproducttocart() {
         cartSteps.navigateToHomepage();
         cartSteps.goToCartpage();
 
     }
+
     @Test
-    public void removeproductfromcart(){
+    public void removeproductfromcart() {
         cartSteps.navigateToHomepage();
         cartSteps.removeproductfromcart();
     }
 
-    }
+}
 
 
 

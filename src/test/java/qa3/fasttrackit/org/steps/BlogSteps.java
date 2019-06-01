@@ -15,16 +15,23 @@ public class BlogSteps {
     }
 
     @Step
-    public void gotoblogButton()   {
-    blogPage.clickblogButton();
-}
+    public void gotoblogButton() {
+        blogPage.clickblogButton();
+    }
+
     @Step
     public void postcomment(String comment) {
         blogPage.setCommentField(comment);
     }
+
     @Step
-    public void sendcomment() { blogPage.clickpostCommentButton();}
+    public void sendcomment() {
+        blogPage.clickpostCommentButton();
+    }
+
     @Step
-    public void checkcomment(){ blogPage.setMessageField(); }
+    public void checkcomment() {
+        blogPage.setMessageField();
+    }
 
 }

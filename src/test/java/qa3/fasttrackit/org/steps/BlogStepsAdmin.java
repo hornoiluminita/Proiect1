@@ -9,21 +9,23 @@ public class BlogStepsAdmin {
     Homepage homepage;
     LoginPage loginPage;
     BlogPageAdmin blogPageAdmin;
+
     @Step
-    public void navigateToHomepage(){
+    public void navigateToHomepage() {
         homepage.open();
     }
 
     @Step
-    public  void removecomment(){
-       blogPageAdmin.clickfastTrackITButton();
-       blogPageAdmin.clickcommentsButton();
-       blogPageAdmin.clickselectcommnetButton();
-       blogPageAdmin.clickmoveToTrashButton();
-       blogPageAdmin.clickapplyButton();
+    public void removecomment() {
+        blogPageAdmin.clickfastTrackITButton();
+        blogPageAdmin.clickcommentsButton();
+        blogPageAdmin.clickselectcommnetButton();
+        blogPageAdmin.clickmoveToTrashButton();
+        blogPageAdmin.clickapplyButton();
         sleep(3);
 
     }
+
     @Step
     public static void sleep(int seconds) {
         try {

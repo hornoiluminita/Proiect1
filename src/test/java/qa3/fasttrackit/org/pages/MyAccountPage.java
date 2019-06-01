@@ -10,26 +10,32 @@ public class MyAccountPage extends PageObject {
 
     @FindBy(css = "p:first-child")
     private WebElementFacade helloMessage;
-    @FindBy (css="a[title^='My Account'] ")
+    @FindBy(css = "a[title^='My Account'] ")
     private WebElementFacade myaccountButton;
-    @FindBy (css="li a[href*='my-account/orders']")
+    @FindBy(css = "li a[href*='my-account/orders']")
     private WebElementFacade ordersButton;
-    @FindBy (css="a.woocommerce-button.button.view")
+    @FindBy(css = "a.woocommerce-button.button.view")
     private WebElementFacade viewOrderButton;
-    @FindBy (css=".order-status")
+    @FindBy(css = ".order-status")
     private WebElementFacade checkOrderButton;
+
     public void checkLoggedIn(String Username) {
         helloMessage.shouldContainText("Hello " + Username);
     }
-    public void myaccountButton(){
+
+    public void myaccountButton() {
         clickOn(myaccountButton);
     }
-    public void ordersButton(){
+
+    public void ordersButton() {
         clickOn(ordersButton);
     }
-    public void viewOrderButton(){
+
+    public void viewOrderButton() {
         clickOn(viewOrderButton);
     }
-    public void setCheckOrderButton(){checkOrderButton.shouldContainText("On hold");
+
+    public void setCheckOrderButton() {
+        checkOrderButton.shouldContainText("On hold");
     }
 }

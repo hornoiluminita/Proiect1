@@ -20,9 +20,9 @@ public class QuantityCartPage extends PageObject {
     private WebElementFacade updatecartButton;
     @FindBy(css = ".woocommerce-message")
     private WebElementFacade checkupdateproductButton;
-    @FindBy (css=".input-text.qty.text")
+    @FindBy(css = ".input-text.qty.text")
     private WebElementFacade checknegativequantitymessage;
-    @FindBy(css=".cart-empty")
+    @FindBy(css = ".cart-empty")
     private WebElementFacade checknotnumericquantitymessage;
 
     public void clickshopButton() {
@@ -49,11 +49,13 @@ public class QuantityCartPage extends PageObject {
     public void setCheckupdateproductButton() {
         checkupdateproductButton.shouldContainText("Cart updated.");
     }
-   public void setChecknegativequantitymessage(){
+
+    public void setChecknegativequantitymessage() {
         getDriver().navigate().refresh();
         checknegativequantitymessage.shouldContainText("");
-   }
-    public void setChecknotnumericquantitymessage(){
+    }
+
+    public void setChecknotnumericquantitymessage() {
         checknotnumericquantitymessage.shouldContainText("Your cart is currently empty.");
     }
 }

@@ -19,15 +19,16 @@ public class CartTestAdmin {
     @Steps
     LoginSteps loginSteps;
     @Steps
-   CartStepsAdmin cartStepsAdmin;
+    CartStepsAdmin cartStepsAdmin;
     @Steps
     QuantityCartTest quantityCartTest;
+
     @Test
-    public void addproducttoshop(){
+    public void addproducttoshop() {
         loginSteps.navigateToHomepage();
         loginSteps.goToLoginPage();
-        loginSteps.loginUser("admin","parola11");
-        cartStepsAdmin.addproducttoshop("100","90","Bag");
+        loginSteps.loginUser("admin", "parola11");
+        cartStepsAdmin.addproducttoshop("100", "90", "Bag");
 
 
     }

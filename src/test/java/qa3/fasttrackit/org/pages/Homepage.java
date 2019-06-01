@@ -15,11 +15,11 @@ public class Homepage extends PageObject {
     @FindBy(css = "button[name='login']")
     private WebElementFacade loginLink;
 
-    public void clickMyAccount(){
+    public void clickMyAccount() {
         clickOn(myAccountButton);
     }
 
-    public void clickLoginLink(){
+    public void clickLoginLink() {
         clickOn(loginLink);
     }
 

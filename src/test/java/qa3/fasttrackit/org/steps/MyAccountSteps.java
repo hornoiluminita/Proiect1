@@ -9,11 +9,12 @@ public class MyAccountSteps {
     Homepage homepage;
     LoginPage loginPage;
     MyAccountPage myAccountPage;
-   @Step
-    public void checkOrders(){
-      myAccountPage.myaccountButton();
-      myAccountPage.ordersButton();
-      myAccountPage.viewOrderButton();
-      myAccountPage.setCheckOrderButton();
-   }
+
+    @Step
+    public void checkOrders() {
+        myAccountPage.myaccountButton();
+        myAccountPage.ordersButton();
+        myAccountPage.viewOrderButton();
+        myAccountPage.setCheckOrderButton();
+    }
 }

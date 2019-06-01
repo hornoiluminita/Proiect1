@@ -20,11 +20,12 @@ public class MyAccountTest {
     LoginSteps loginSteps;
     @Steps
     MyAccountSteps myAccountSteps;
+
     @Test
-    public void checkordderMessage (){
-     loginSteps.navigateToHomepage();
-     loginSteps.goToLoginPage();
-     loginSteps.loginUser("lllumy@yahoo.co.uk","oana1986@");
-     myAccountSteps.checkOrders();
+    public void checkordderMessage() {
+        loginSteps.navigateToHomepage();
+        loginSteps.goToLoginPage();
+        loginSteps.loginUser("lllumy@yahoo.co.uk", "oana1986@");
+        myAccountSteps.checkOrders();
     }
 }

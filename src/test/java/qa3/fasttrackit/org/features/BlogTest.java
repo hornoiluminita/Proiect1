@@ -18,11 +18,12 @@ public class BlogTest {
     LoginSteps loginSteps;
     @Steps
     BlogSteps blogSteps;
+
     @Test
-    public void postusercomment(){
+    public void postusercomment() {
         loginSteps.navigateToHomepage();
         loginSteps.goToLoginPage();
-        loginSteps.loginUser("lllumy@yahoo.co.uk","oana1986@");
+        loginSteps.loginUser("lllumy@yahoo.co.uk", "oana1986@");
         blogSteps.gotoblogButton();
         blogSteps.postcomment("Buna");
         blogSteps.sendcomment();

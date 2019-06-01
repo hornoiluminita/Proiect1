@@ -6,6 +6,7 @@ import qa3.fasttrackit.org.pages.Homepage;
 import qa3.fasttrackit.org.pages.LoginPage;
 import qa3.fasttrackit.org.pages.MyAccountPage;
 import qa3.fasttrackit.org.pages.QuantityCartPage;
+
 public class QuantityCartSteps {
     Homepage homepage;
     QuantityCartPage quantityCartPage;
@@ -25,17 +26,19 @@ public class QuantityCartSteps {
     }
 
     @Step
-    public void checkupdatecart (){
+    public void checkupdatecart() {
         quantityCartPage.setCheckupdateproductButton();
 
     }
+
     @Step
-    public void checknegativequantitymessage(){
-     quantityCartPage.setChecknegativequantitymessage();
+    public void checknegativequantitymessage() {
+        quantityCartPage.setChecknegativequantitymessage();
     }
+
     @Step
-    public  void checknotnumericquantitymessage(){
-    quantityCartPage.setChecknotnumericquantitymessage();
+    public void checknotnumericquantitymessage() {
+        quantityCartPage.setChecknotnumericquantitymessage();
     }
 
 }

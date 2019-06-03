@@ -10,7 +10,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 public class Cartpage extends PageObject {
     @FindBy(css = "a[href*='shop']")
     private WebElementFacade shopButton;
-    @FindBy(css = "a[href*='add-to-cart=48']")
+    @FindBy(css = "a[href*='add-to-cart=2627']")
     private WebElementFacade addtocartButton;
     @FindBy(css = "a[href*='checkout']")
     private WebElementFacade checkoutButton;
@@ -38,7 +38,9 @@ public class Cartpage extends PageObject {
     public void clickviewcartButton() {
         clickOn(viewcartButton);
     }
-
+    public void setCheckoutButton() {
+        checkaddedProduct.shouldContainText("Your order");
+    }
     public void clickremovecartButton() {
         clickOn(removecartButton);
     }
@@ -47,7 +49,4 @@ public class Cartpage extends PageObject {
         checkMessageRemoveProductField.shouldContainText("Your cart is currently empty.");
     }
 
-    public void setCheckoutButton() {
-        checkaddedProduct.shouldContainText("Your order");
-    }
 }

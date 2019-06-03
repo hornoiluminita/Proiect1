@@ -10,7 +10,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 public class QuantityCartPage extends PageObject {
     @FindBy(css = "a[href*='shop']")
     private WebElementFacade shopButton;
-    @FindBy(css = "a[href*='add-to-cart=60']")
+    @FindBy(css = "a[href*='add-to-cart=2627']")
     private WebElementFacade addcartButton;
     @FindBy(css = "i.fa.fa-shopping-cart")
     private WebElementFacade viewcartButton;

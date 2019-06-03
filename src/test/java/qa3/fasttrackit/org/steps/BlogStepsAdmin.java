@@ -19,6 +19,7 @@ public class BlogStepsAdmin {
     public void removecomment() {
         blogPageAdmin.clickfastTrackITButton();
         blogPageAdmin.clickcommentsButton();
+        blogPageAdmin.clickmycommentButton();
         blogPageAdmin.clickselectcommnetButton();
         blogPageAdmin.clickmoveToTrashButton();
         blogPageAdmin.clickapplyButton();

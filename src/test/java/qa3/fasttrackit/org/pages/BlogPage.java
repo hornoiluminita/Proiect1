@@ -14,7 +14,7 @@ public class BlogPage extends PageObject {
     private WebElementFacade commentField;
     @FindBy(css = ".submit")
     private WebElementFacade postCommentButton;
-    @FindBy(css = "#content #comment-573 .comment-awaiting-moderation")
+    @FindBy(css = "#div-comment-617 p.comment-awaiting-moderation")
     private WebElementFacade messageField;
 
     public void clickblogButton() {

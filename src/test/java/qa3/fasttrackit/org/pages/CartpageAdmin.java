@@ -23,6 +23,8 @@ public class CartpageAdmin extends PageObject {
     private WebElementFacade salepriceField;
     @FindBy(css = "#publish")
     private WebElementFacade publishButton;
+    @FindBy(css=".updated.notice.notice-success.is-dismissible p")
+    private WebElementFacade checkMessageButton;
 
     public void clickfastTrackITButton() {
         clickOn(fastTrackITButton);
@@ -53,5 +55,7 @@ public class CartpageAdmin extends PageObject {
         waitABit(1500);
         clickOn(publishButton);
     }
-
+  public void checkMessageButton(){
+        checkMessageButton.shouldContainText("Product published");
+  }
 }

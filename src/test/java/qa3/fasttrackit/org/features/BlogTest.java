@@ -25,7 +25,7 @@ public class BlogTest {
         loginSteps.goToLoginPage();
         loginSteps.loginUser("lllumy@yahoo.co.uk", "oana1986@");
         blogSteps.gotoblogButton();
-        blogSteps.postcomment("Buna");
+        blogSteps.postcomment("Buna ziua");
         blogSteps.sendcomment();
         blogSteps.checkcomment();
     }

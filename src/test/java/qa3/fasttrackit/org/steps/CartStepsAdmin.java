@@ -23,5 +23,6 @@ public class CartStepsAdmin {
         cartpageAdmin.setRegularpriceField(regularprice);
         cartpageAdmin.setSaleprice(saleprice);
         cartpageAdmin.clickpublishButton();
+        cartpageAdmin.checkMessageButton();
     }
 }

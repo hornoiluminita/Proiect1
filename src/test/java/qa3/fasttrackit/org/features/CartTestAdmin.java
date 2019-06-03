@@ -20,8 +20,6 @@ public class CartTestAdmin {
     LoginSteps loginSteps;
     @Steps
     CartStepsAdmin cartStepsAdmin;
-    @Steps
-    QuantityCartTest quantityCartTest;
 
     @Test
     public void addproducttoshop() {

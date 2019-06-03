@@ -9,8 +9,6 @@ import org.openqa.selenium.WebDriver;
 import qa3.fasttrackit.org.steps.BlogStepsAdmin;
 import qa3.fasttrackit.org.steps.LoginSteps;
 
-import static qa3.fasttrackit.org.steps.BlogStepsAdmin.sleep;
-
 @RunWith(SerenityRunner.class)
 
 public class BlogTestAdmin {

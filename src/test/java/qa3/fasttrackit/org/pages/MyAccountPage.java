@@ -36,6 +36,6 @@ public class MyAccountPage extends PageObject {
     }
 
     public void setCheckOrderButton() {
-        checkOrderButton.shouldContainText("On hold");
+        checkOrderButton.shouldContainText("Processing");
     }
 }
